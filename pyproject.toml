@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mmdiag"
+version = "0.1.0"
+description = "Market microstructure diagnostics for any price feed: signature plots, variance ratios, spread-volatility (MRR) elasticity and intraday spread/activity profiles"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2.0"]
+keywords = ["market microstructure", "signature plot", "realized volatility", "variance ratio", "bid-ask spread", "intraday seasonality"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
